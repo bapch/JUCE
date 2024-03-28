@@ -53,7 +53,7 @@ namespace
             return output.writeIntBigEndian (value);
         }
 
-        bool writeUint64 (uint64 value)
+        bool writeInt64 (int64 value)
         {
             return output.writeInt64BigEndian (int64 (value));
         }
@@ -127,7 +127,7 @@ namespace
                 case OSCTypes::F:           return true;
                 case OSCTypes::I:           return true;
                 case OSCTypes::int32:       return writeInt32(arg.getInt32());
-                case OSCTypes::int64:       return writeUint64 (arg.getInt64());
+                case OSCTypes::int64:       return writeInt64 (arg.getInt64());
                 case OSCTypes::float32:     return writeFloat32 (arg.getFloat32());
                 case OSCTypes::string:      return writeString (arg.getString());
                 case OSCTypes::blob:        return writeBlob (arg.getBlob());
